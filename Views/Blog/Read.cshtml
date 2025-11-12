@@ -1,0 +1,38 @@
+﻿@model BasicBlog.Core.ViewModels.ReadWithCommentsViewModel
+@{
+    ViewData["Title"] = "ReadBlog";
+}
+
+<form asp-action="Comment" asp-controller="Blog" method="post">
+    <input type="hidden" asp-for="Blog.Id" />
+    <h2>@Model.Blog.Title</h2>
+    <p>@Model.Blog.BlogText</p>
+    <hr />
+
+    @if (User.Identity?.IsAuthenticated ?? false)
+    {
+        <button type="submit" class="btn btn-primary">Leave Comment</button>
+        <div style="margin:5px;">
+            <textarea class="comment-area" asp-for="Comment.CommentText"></textarea>
+        </div>
+        <input type="hidden" asp-for="Comment.Username" />
+    }
+</form>
+
+<h3>Comments</h3>
+@if (Model.Blog.Comments != null)
+{
+    <ul class="list-group">
+        @foreach (var comment in Model.Blog.Comments.OrderByDescending(c => c.TimeCommented))
+        {
+            <li class="list-group-item">
+                <div>
+                    <span>@comment.Username</span>
+                    <span class="comment-time">@comment.TimeCommented</span>
+                </div>
+                <p class="comment-text">@comment.CommentText</p>
+            </li>
+        }
+    </ul>
+}
+

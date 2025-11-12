@@ -1,0 +1,56 @@
+﻿@model BasicBlog.Core.ViewModels.ShowAllBlogsViewModel
+@{
+    ViewData["Title"] = "Blogs";
+}
+
+@if (User.Identity?.IsAuthenticated ?? false)
+{
+    <br />
+    <a asp-controller="Blog" asp-action="Edit" asp-route-id="0" class="btn btn-primary">New Blog</a>
+    <a asp-controller="Blog" asp-action="ViewOwnBlogs" class="btn btn-primary">View My Blogs</a>
+}
+
+<h2>Blogs</h2>
+
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th class="title-font" scope="col">Blog Title</th>
+            <th class="title-font" scope="col">Date Created</th>
+            <th class="title-font" scope="col">Author</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.BlogList.Count; i++)
+        {
+            var owner = Model.Users.FirstOrDefault(u => u.Id == Model.BlogList[i].BlogOwnerId);
+            <tr onclick="location.href='@Url.Action("Read", "Blog", new { id = Model.BlogList[i].Id })'">
+                <td class="col-md-4 larger-font">@Model.BlogList[i].Title</td>
+                <td class="col-md-4 larger-font">@Model.BlogList[i].CreatedOn</td>
+                <td class="col-md-4 larger-font">@owner?.UserName</td>
+                @if (Model.ViewOrEdit == "Edit")
+                {
+                    <td class="col-md-4">
+                        <a asp-action="Edit" asp-route-id="@Model.BlogList[i].Id" class="btn primary-btn">Edit</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+<div>
+    @if (Model.PageNumber > 1)
+    {
+        <a class="btn btn-default" href="@Url.Action(Model.ViewOrEdit == "View" ? "Index" : "ViewOwnBlogs", new { page = Model.PageNumber - 1 })">Prev</a>
+    }
+    @if (Model.PageNumber < Model.PageCount)
+    {
+        <a class="btn btn-default" href="@Url.Action(Model.ViewOrEdit == "View" ? "Index" : "ViewOwnBlogs", new { page = Model.PageNumber + 1 })">Next</a>
+    }
+</div>
+

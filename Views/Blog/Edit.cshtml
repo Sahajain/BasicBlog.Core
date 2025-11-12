@@ -1,0 +1,26 @@
+﻿@model BasicBlog.Core.Models.Blog
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Save" asp-controller="Blog" method="post">
+    <div class="form-group">
+        <label asp-for="Title" class="indent my-input"></label>
+        <input asp-for="Title" class="form-control my-input" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <br />
+    <div class="form-group">
+        <label asp-for="BlogText" class="indent"></label>
+        <textarea asp-for="BlogText" class="form-control my-input" style="height:400px; max-width:80%"></textarea>
+        <span asp-validation-for="BlogText"></span>
+    </div>
+    <button type="submit" class="btn btn-primary indent">Submit</button>
+    @if (Model.Id != 0)
+    {
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-primary">Delete</a>
+    }
+</form>
+
