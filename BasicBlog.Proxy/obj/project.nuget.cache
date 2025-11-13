@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wfpMABVxuEE=",
+  "success": true,
+  "projectFilePath": "D:\\new blog\\BasicBlog.Proxy\\BasicBlog.Proxy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sahaj\\.nuget\\packages\\microsoft.reverseproxy\\1.0.0-preview.9.21116.1\\microsoft.reverseproxy.1.0.0-preview.9.21116.1.nupkg.sha512"
+  ],
+  "logs": []
+}

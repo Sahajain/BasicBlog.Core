@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BasicBlog.Proxy/1.0.0": {
+        "dependencies": {
+          "Microsoft.ReverseProxy": "1.0.0-preview.9.21116.1"
+        },
+        "runtime": {
+          "BasicBlog.Proxy.dll": {}
+        }
+      },
+      "Microsoft.ReverseProxy/1.0.0-preview.9.21116.1": {
+        "runtime": {
+          "lib/net5.0/Microsoft.ReverseProxy.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.21.11601"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BasicBlog.Proxy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.ReverseProxy/1.0.0-preview.9.21116.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rn0aAwuFj/mRTPDkRxfpiuVP59Y9paUs0ltMtCeGvK/TcxrqLhIzZyhidsk78g85OOIRmjfGQdw0V7CJt340CA==",
+      "path": "microsoft.reverseproxy/1.0.0-preview.9.21116.1",
+      "hashPath": "microsoft.reverseproxy.1.0.0-preview.9.21116.1.nupkg.sha512"
+    }
+  }
+}

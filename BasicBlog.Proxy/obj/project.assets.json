@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Microsoft.ReverseProxy/1.0.0-preview.9.21116.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.ReverseProxy.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.ReverseProxy.dll": {
+            "related": ".pdb"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.ReverseProxy/1.0.0-preview.9.21116.1": {
+      "sha512": "Rn0aAwuFj/mRTPDkRxfpiuVP59Y9paUs0ltMtCeGvK/TcxrqLhIzZyhidsk78g85OOIRmjfGQdw0V7CJt340CA==",
+      "type": "package",
+      "path": "microsoft.reverseproxy/1.0.0-preview.9.21116.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net5.0/Microsoft.ReverseProxy.dll",
+        "lib/net5.0/Microsoft.ReverseProxy.pdb",
+        "lib/netcoreapp3.1/Microsoft.ReverseProxy.dll",
+        "lib/netcoreapp3.1/Microsoft.ReverseProxy.pdb",
+        "microsoft.reverseproxy.1.0.0-preview.9.21116.1.nupkg.sha512",
+        "microsoft.reverseproxy.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Microsoft.ReverseProxy >= 1.0.0-preview.9.21116.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\sahaj\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\new blog\\BasicBlog.Proxy\\BasicBlog.Proxy.csproj",
+      "projectName": "BasicBlog.Proxy",
+      "projectPath": "D:\\new blog\\BasicBlog.Proxy\\BasicBlog.Proxy.csproj",
+      "packagesPath": "C:\\Users\\sahaj\\.nuget\\packages\\",
+      "outputPath": "D:\\new blog\\BasicBlog.Proxy\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\sahaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Microsoft.ReverseProxy": {
+            "target": "Package",
+            "version": "[1.0.0-preview.9.21116.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
